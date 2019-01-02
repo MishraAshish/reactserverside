@@ -1,0 +1,29 @@
+{
+  "name": "reactserverportal",
+  "version": "1.0.0",
+  "description": "building react app on server side to support rn portal",
+  "main": "server.js",
+  "scripts": {
+    "start": " cross-env NODE_ENV=development webpack -d & cross-env NODE_ENV=development node server.js --inline -hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bold",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-react-app": "^7.0.0",
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^3.0.1",
+    "postcss-loader": "^3.0.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2"
+  }
+}
