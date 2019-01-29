@@ -4,8 +4,8 @@ import tipsImg from "../../public/media/tips-img.png";
 import formatingTool from "../../public/media/formating-tool-img.png";
 import asseen from "../../public/media/as-seen-in.png";
 
-export default function MyAppBody() {
-    let rgu = "https://local.resume-now.com/membership/RegisterGuestUser.aspx?ref=3";
+export default function BodyHtml() {
+    let rgu = global.domainName+global.rguPath;
     return (
 <div>
     <div className="bnr-wrp">
@@ -49,6 +49,7 @@ export default function MyAppBody() {
                             <div className="feat-title">20 TEMPLATES</div>
                             <h2>Not sure how to get started?</h2>
                            <p>A good first step is selecting a design that meets your needs. We have over 20 design templates that make it easy to get started.</p>                            
+                           <a href={rgu} target="_blank" className="view-link">View our Templates <i className="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -61,7 +62,7 @@ export default function MyAppBody() {
                             <div className="feat-title">HELPFUL TIPS</div>
                             <h2>Don't know what employers are looking for?</h2>
                              <p>We offer expert advice and 1000s of career-specific writing examples you can add directly to your resume.</p>
-                            
+                             <a href={rgu} target="_blank" className="view-link">Look at Tips and Sample Text <i className="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -74,6 +75,7 @@ export default function MyAppBody() {
                             <div className="feat-title">FORMATTING TOOLS</div>
                             <h2>Can't get the formatting right?</h2>
                             <p>We eliminate the frustration of trying to format in Word. Our designs and simple formatting tools make it easy to get you exact look you want.</p>
+                            <a href={rgu} target="_blank" className="view-link">Try Our Formatting Tools <i className="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
