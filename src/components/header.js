@@ -1,104 +1,88 @@
 import React from "react";
 
-export default function HeaderHtml() {    
-  function OpenFreshChat(){
-    debugger;
-    if (window.fcWidget.isInitialized() != true) 
-      { 
-        window.fcWidget.init({ 
-            token: "9a3e50a0-da60-4527-a92d-b475b91588b5",
-            host: "https://wchat.freshchat.com",
-            tags: ["13"],siteid: "Resume-Now" ,
-            locale: "en",
-            open: true
-          });
-    }
-  }
+export default function HeaderHtml() {      
     return (
-          <div id="rnaseoheader">
-    <div className="rnheader78-inner-wrapper">
-  <header className="fixed-header-78-cntr rna-fixed-header-78-cntr">
-    <div className="top-header-78 hidden-xs">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="chat-cntr pull-right"> 
-              <div className="chat-support-cntr">
-                <span className="comment-icon pull-left">
-                <img src="https://images.ctfassets.net/zg138yds72up/Z6rtFMNyUeicmYyci6GQa/3ef7450fde0d195ba6ae88c51ac114d4/comment-icon.png" alt=""/></span>
-                    <div className="chat-inner-cntr pull-right"> <strong>SUPPORT 7 DAYS A WEEK</strong>
-                      <div className="clear"> 
-                        <a href={global.domainName+"/information/contact.aspx"}>PHONE</a>,
-                        <a href={global.domainName+"/information/contact.aspx"}>EMAIL & </a>
-                        <a href={global.domainName+"/information/contact.aspx"}>LIVE CHAT</a> 
-                      </div>
-                    </div>
+      <div id="rnasemheader">
+      <header className="sem-seo header dynamicHeader">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-3 header-left">
+              <a href="/" className="header-logo js-header-logo">
+                <img src="https://images.ctfassets.net/3m3qjq9w5z7d/4ifUx0PSdilyP9eJnJr6PD/09e442bf07792c86470084b59b238b99/resume-now-logo.svg"
+                  alt="resume-now-logo" title="Resume Now logo" />
+              </a>
+              <div className="menu-wrapper">
+                <span className="title icon icon-menu js-icon-menu">Menu</span>
+                <input type="checkbox" className="menu-check-action"/>
+                <div className="sidebar-menu">
+                  <ul className="sub-header  many-option js-sub-header move">
+                    <li className="nav-links">
+                      <a href="/" className="js-header-logo">
+                        <img src="https://images.ctfassets.net/3m3qjq9w5z7d/4ifUx0PSdilyP9eJnJr6PD/09e442bf07792c86470084b59b238b99/resume-now-logo.svg"
+                          alt="resume-now-logo" title="Resume Now logo"/>
+                      </a>
+                    </li>
+                    <li className="nav-links login ">
+                      <a href={global.domainName +"/membership/signin.aspx?productid=10&ref=3"}>Login</a>
+                    </li>
+                    <li className="nav-links logout  auth-links">
+                      <a href={global.domainName +"/membership/signout.aspx"}>Logout</a>
+                    </li>
+                    <li className="nav-links auth-links active">
+                      <a id="lnkGoToDashboard" href={global.domainName +"/mobile/dashboard/documents"} className="icon icon-doc">Your Documents</a>
+                    </li>
+                    <li className="nav-links auth-links">
+                      <a href={global.domainName +"/profile/my-settings-b.aspx"} className="icon icon-acc-setting">Account Settings</a>
+                    </li>
+                    <li className="nav-links">
+                      <a href={global.domainName +"/contact-us"} className="icon icon-contact">Contact Us</a>
+                    </li>    
+                  </ul>
+                </div>
               </div>
-              <div className="contact-box-wrap-78">
-            <div className="contact-box-78 text-center">        
-              <h2> Need help with anything? </h2>         
-              <p> <img className="headcontacticon" alt="contact icon" src="https://images.ctfassets.net/zg138yds72up/1gYa6tCbwseOciuK2QcUe/e47f868f944c567bd8ac622a9c17cbae/contact-icon.png"/></p>        
-              <p> 844-351-7484 <br/> Mon-Fri 8am to 8pm CST <br/> Sat 8am to 5pm / Sun 10am-6pm CST <br/> 
-                <a href="mailto:customerservice@resume-now.com">customerservice@resume-now.com</a>  
-              </p>        
-              <div className="chat-bx">
-                <span id="chat_link"><a onClick={OpenFreshChat} href="#" className="liveHelpNow chatLive"> LIVE CHAT </a></span>
-                <span id="chat-widget"></span>
-              </div>    
             </div>
-        </div>
+            <div className="col-sm-9 header-right">
+              <nav className="pull-right">
+                <ul>
+                  <li className="nav-links home-links">
+                    <a href={global.domainName +"/templates"}>Resume</a>
+                  </li>
+                  <li className="nav-links home-links ">
+                    <a className="js-job-links" href={global.jobsLink}>Jobs</a>
+                  </li>
+                  <li className="nav-links active login">
+                    <a href={global.domainName +"/membership/signin.aspx?productid=10ref=3"}>LOGIN</a>
+                  </li>
+    
+                  <li className="nav-links icon icon-user js-user-icon auth-links">
+                    <div className="user-popup js-user-popup">
+                      <div className="acc-detail">
+                        <span className="user-name">Firstname Lastname</span>
+                        <span className="user-id">useremail@email.com</span>
+                      </div>
+                      <ul className="acc-list">
+                        <li className="icon icon-setting">
+                          <a href={global.domainName +"/profile/my-settings-b.aspx"}>Settings</a>
+                        </li>
+                        <li className="icon icon-support">
+                          <a href={global.domainName +"/contact-us"}>Help Support</a>
+                        </li>
+                        <li className="icon icon-logout auth-links">
+                          <a href={global.domainName +"/membership/signout.aspx"}>Log out</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>                  
+                  <li className="nav-links icon icon-chat">
+                    <a href={global.domainName +"/contact-us"}>CONTACT US</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
-      </div>
-              
-          <div className="bottom-header-78">
-              <div className="container">
-              <div className="row">	  
-                  <div className="navbar-header">		 
-        <div className="pull-left">
-          <a id="rna-seo-logo" href={global.domainName+"/membership/RegisterGuestUser.aspx"} className="navbar-brand-78">
-            <img src="https://content.livecareer.com/rna/images/desktop/logo.png" alt="Resume-Now" title="Resume-Now"/>
-          </a>
-        </div>
-        <div className="pull-right">
-          <span className="comment-icon pull-left hidden-sm hidden-md hidden-lg">
-          <img src="https://images.ctfassets.net/zg138yds72up/Z6rtFMNyUeicmYyci6GQa/3ef7450fde0d195ba6ae88c51ac114d4/comment-icon.png" alt=""/></span>
-          <button data-toggle="collapse" className="navbar-toggle-78 collapsed" type="button">
-            <span id="fixed-open-nav" className="open-nav"><i className="fa fa-bars"></i> Menu</span>
-            <span id="fixed-close-nav" className="hidden-xs"><i className="fa fa-times"></i> Close</span>
-          </button>				
-      </div>
-      
-      <div className="contact-box-wrap-78">
-          <div className="contact-box-78 text-center">        
-                  <h2> Need help with anything? </h2>         
-                  <p> <img className="headcontacticon" alt="contact icon" src="https://images.ctfassets.net/zg138yds72up/1gYa6tCbwseOciuK2QcUe/e47f868f944c567bd8ac622a9c17cbae/contact-icon.png"/></p>        
-                  <p> 844-351-7484 <br/> Mon-Fri 8am to 8pm CST <br/> Sat 8am to 5pm / Sun 10am-6pm CST  <br/>
-                  <a href="mailto:customerservice@resume-now.com">customerservice@resume-now.com</a>  
-                  </p>        
-                  <div className="chat-bx">
-                      <span id="chat_link_sec"><a onClick="javascript:OpenFreshChat();return false;" href="#" className="liveHelpNow chatLive"> LIVE CHAT </a></span>
-                  </div>    
-          </div>
-      </div>
-      
-      </div>	
-      
-          <div className="navbar-collapse collapse pull-right navbar-collapse-78">         
-            <ul className="nav navbar-nav navbar-right nav-pills header-right-nav-78">	    
-              <li><a href={global.domainName+"/templates"}>Resume Templates</a></li>
-              <li><a href="//jobs.resume-now.com">Jobs</a></li>
-              <li className="hidden-sm hidden-md hidden-lg"><a href={global.domainName+"/information/contact.aspx"}>Contact Us</a></li> 
-              <li><a href={global.domainName+"/membership/signin.aspx?productid=10&amp;ref=3"} className="login-link">Login</a></li>			           
-            </ul>		  
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-  </header>
-  </div></div>
+      </header>
+      <div className="sem-seo header-seperator"></div>
+    </div>    
   )
 }
